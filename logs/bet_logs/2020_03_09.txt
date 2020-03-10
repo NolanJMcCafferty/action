@@ -1,0 +1,15 @@
+Sport: football, Title: nfl - odds to win super bowl lv, Team: tampa bay buccaneers
+	Type: ml, Line: None, Odds: 4500
+	Risk: 10, To Win: 450
+	Percent Off: 0.28
+
+Sport: football, Title: ncaaf - 2020-2021 national championship winner, Team: texas
+	Type: ml, Line: None, Odds: 3500
+	Risk: 10, To Win: 350
+	Percent Off: 0.4
+
+Sport: football, Title: ncaaf - 2020-2021 national championship winner, Team: usc
+	Type: ml, Line: None, Odds: 5000
+	Risk: 10, To Win: 500
+	Percent Off: 0.67
+
