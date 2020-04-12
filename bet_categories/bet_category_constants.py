@@ -852,6 +852,7 @@ odds_to_win_links_dict = {
 	"spain la liga 2019/20 - odds to win": "La Liga Winner 2020 (All in)",
 	"nhl - odds to win stanley cup 2019-2020": "To Win 2019/20 Stanley Cup",
 	"wta - french open 2020 - odds to win": "Player To Win French Open? (All In)",
+	"atp - french open 2020 - odds to win": "Player To Win French Open? (Nadal must start)",
 }
 
 fighting_name_dict = {
