@@ -1,8 +1,6 @@
 import os
 import time
 from selenium import webdriver
-from selenium.webdriver.common.action_chains import ActionChains
-import sys
 from bet_category import BetCategory
 from bet_categories.baseball import Baseball
 from bet_categories.soccer import Soccer
@@ -21,6 +19,7 @@ from bet_categories.snooker import Snooker
 from bet_categories.futsal import Futsal
 from bet_categories.darts import Darts
 from bet_categories.esports import Esports
+from bet_categories.table_tennis import TableTennis
 
 
 class Book:
@@ -30,7 +29,7 @@ class Book:
 		self.password = password
 
 		options = webdriver.ChromeOptions()
-		options.add_argument('--headless')
+		# options.add_argument('--headless')
 		options.add_argument('--no-sandbox')
 		options.add_argument('--disable-dev-shm-usage')
 
@@ -116,13 +115,15 @@ class Book:
 				bet_category = Darts()
 			elif sport == 'esports':
 				bet_category = Esports()
+			elif sport == 'table tennis':
+				bet_category = TableTennis()
 
 			if bet_category:
 				bet_category.add_attributes(
-					driver = self.driver,
-					id = league.get_attribute('data-lg'),
-					title = title,
-					sport = sport,
+					driver=self.driver,
+					id=league.get_attribute('data-lg'),
+					title=title,
+					sport=sport,
 				)
 				bet_categories.append(bet_category)
 		return bet_categories
@@ -131,6 +132,7 @@ class Book:
 		self.driver.get(BetCategory.url + bet_category.id)
 		time.sleep(1)
 
+	@staticmethod
 	def get_sport(league, title):
 		sport = league.find_element_by_xpath('./../../../..').get_attribute('id')
 		sport = sport.replace("_", " ").split()
@@ -147,4 +149,3 @@ class Book:
 		time.sleep(2)
 		self.driver.execute_script("dobet()")
 		time.sleep(5)
-	

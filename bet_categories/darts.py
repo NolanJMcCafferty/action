@@ -1,6 +1,5 @@
 from bet_category import BetCategory
-from bet import Bet
-from pinnacle import Pinnacle
+
 
 class Darts(BetCategory):
 
@@ -26,5 +25,6 @@ class Darts(BetCategory):
 
 		return period_text
 
-	def fix_team_names(self, team_name):
+	@staticmethod
+	def fix_team_names(team_name):
 		return team_name

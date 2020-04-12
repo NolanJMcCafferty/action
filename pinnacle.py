@@ -1,26 +1,26 @@
 import time
 import os
-import sys
 from selenium import webdriver
 
 
 class Pinnacle:
 
 	other_sports = [
-	'volleyball', 
-	'rugby-union', 
-	'rugby-league', 
-	'handball', 
-	'snooker',
-	'futsal',
-	'darts',
-	'esports',
+		'volleyball',
+		'rugby-union',
+		'rugby-league',
+		'handball',
+		'snooker',
+		'futsal',
+		'darts',
+		'esports',
+		'table tennis',
 	]
 	other_leagues = ['mma']
 
 	def __init__(self):
 		options = webdriver.ChromeOptions()
-		options.add_argument('--headless')
+		# options.add_argument('--headless')
 		options.add_argument('--no-sandbox')
 		options.add_argument('--disable-dev-shm-usage')
 

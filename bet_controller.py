@@ -41,7 +41,7 @@ class BetController:
         for bet_category in bet_categories:
             book.open(bet_category)
             bets = bet_category.get_bets(self.pinnacle)
-            
+
             if bets:
                 self.log_bets(bets)
 
@@ -60,6 +60,7 @@ class BetController:
             if not BetController.bet_already_pending(self.books[0], bet):
                 bet.log()
 
+    @staticmethod
     def bet_already_pending(book, bet):
         bet_already_pending = False
 
@@ -70,6 +71,7 @@ class BetController:
                     break
 
         return bet_already_pending
+
 
 if __name__ == "__main__":
     place_bets = True if sys.argv[1] == '-p' else False

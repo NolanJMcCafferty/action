@@ -1,6 +1,6 @@
 # -------- input book logins here --------
-USERNAME1=sample_username1
-PASSWORD1=sample_password1
+USERNAME1=rcoles900
+PASSWORD1=colesr1000
 
 USERNAME2=sample_username2
 PASSWORD2=sample_password2

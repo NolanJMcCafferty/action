@@ -42,6 +42,7 @@ league_dict = {
 	# soccer
 	"austria bund": "austria bundesliga",
 	"austria other leagues": "austria cup",
+	"belarus vysshaya league": "belarus premier league",
 	"belgium tweede klasse": "belgium first division b",
 	"belgium pro": "belgium first division a",
 	"bolivia liga profesional": "bolivia primera division",

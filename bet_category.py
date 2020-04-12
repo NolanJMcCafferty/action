@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
-import time
 from bet import Bet
 from bet_categories.bet_category_constants import league_dict
+
 
 class BetCategory(ABC):
 
@@ -15,7 +15,8 @@ class BetCategory(ABC):
 		'golf',
 		'tennis', 
 		'mixed-martial-arts', 
-		'boxing'
+		'boxing',
+		'table tennis',
 	]
 
 	url = 'https://engine.action247.ag/wager/Sports.aspx?WT=0&lid='
@@ -30,6 +31,7 @@ class BetCategory(ABC):
 		self.title = title
 		self.sport = BetCategory.get_sport_name(sport, title)
 
+	@staticmethod
 	def get_league(title):
 		league = (
 			title.replace(" odds to win", "")
@@ -39,7 +41,7 @@ class BetCategory(ABC):
 			.replace(" -2019/20 -", "")
 			.replace(" 2020 -", "")
 			.replace("wta -", "wta")
-			.replace("soccer - ", "") # for uefa odds to win
+			.replace("soccer - ", "")  # for uefa odds to win
 		)
 		if league in league_dict:
 			league = league_dict[league]
@@ -60,26 +62,30 @@ class BetCategory(ABC):
 
 		return league
 
+	@staticmethod
 	def get_sport_name(sport, title):
+		sport_name = sport
 		if 'football' in sport:
-			sport = 'football'
+			sport_name = 'football'
 		elif 'basketball' in sport:
-			sport = 'basketball'
+			sport_name = 'basketball'
 		elif sport == 'mma fighting':
-			sport = 'mixed-martial-arts'
+			sport_name = 'mixed-martial-arts'
 		elif sport == 'other sports':
-			if 'futsal'in title:
-				sport = 'futsal'
+			if 'futsal' in title:
+				sport_name = 'futsal'
 			elif 'rugby union' in title:
-				sport = 'rugby-union'
+				sport_name = 'rugby-union'
 			elif 'rugby league' in title:
-				sport = 'rugby-league'
+				sport_name = 'rugby-league'
 			elif 'volleyball' in title:
-				sport = 'volleyball'
+				sport_name = 'volleyball'
+			elif 'table tennis' in title:
+				sport_name = 'table tennis'
 			else:
-				sport = title
+				sport_name = title
 
-		return sport
+		return sport_name
 
 	def get_period(self, title):
 		pass
@@ -123,8 +129,8 @@ class BetCategory(ABC):
 			.replace(".", "")
 		) 
 		if self.sport == 'esports':
-			away_team = away_team  + '-match'
-			home_team = home_team  + '-match'
+			away_team = away_team + '-match'
+			home_team = home_team + '-match'
 
 		if self.is_last_name():
 			away_url_start, away_url_end = f'{away_team}-vs', f'{away_team}/'
@@ -222,14 +228,14 @@ class BetCategory(ABC):
 			)
 			if pinnacle_odds:
 				bet = Bet(
-					sport = self.sport,
-					title = self.title,
-					team = team,
-					action_line = line,
-					action_odds = odds,
-					pinnacle_odds = pinnacle_odds,
-					bet_type = 'handicap',
-					add_bet_line = add_bet_line,
+					sport=self.sport,
+					title=self.title,
+					team=team,
+					action_line=line,
+					action_odds=odds,
+					pinnacle_odds=pinnacle_odds,
+					bet_type='handicap',
+					add_bet_line=add_bet_line,
 				)
 				return bet
 
@@ -255,14 +261,14 @@ class BetCategory(ABC):
 
 			if pinnacle_odds:
 				bet = Bet(
-					sport = self.sport,
-					title = self.title,
-					team = team,
-					action_line = line,
-					action_odds = odds,
-					pinnacle_odds = pinnacle_odds,
-					bet_type = bet_type,
-					add_bet_line = add_bet_line,
+					sport=self.sport,
+					title=self.title,
+					team=team,
+					action_line=line,
+					action_odds=odds,
+					pinnacle_odds=pinnacle_odds,
+					bet_type=bet_type,
+					add_bet_line=add_bet_line,
 				)
 				return bet
 

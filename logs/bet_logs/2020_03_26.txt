@@ -1,0 +1,50 @@
+Sport: baseball, Title: mlb - 2020 world series champion - odds to win, Team: oakland a's
+	Type: ml, Line: None, Odds: 2800
+	Risk: 10, To Win: 280
+	Percent Off: 0.4
+
+Sport: baseball, Title: mlb - 2020 american league pennant- odds to win, Team: oakland a's
+	Type: ml, Line: None, Odds: 1350
+	Risk: 10, To Win: 135
+	Percent Off: 0.36
+
+Sport: football, Title: nfl - odds to win super bowl lv, Team: los angeles chargers
+	Type: ml, Line: None, Odds: 3300
+	Risk: 10, To Win: 330
+	Percent Off: 0.76
+
+Sport: football, Title: nfl - odds to win super bowl lv, Team: buffalo bills
+	Type: ml, Line: None, Odds: 2800
+	Risk: 10, To Win: 280
+	Percent Off: 0.28
+
+Sport: football, Title: ncaaf - 2020-2021 national championship winner, Team: texas
+	Type: ml, Line: None, Odds: 3500
+	Risk: 10, To Win: 350
+	Percent Off: 0.4
+
+Sport: football, Title: ncaaf - 2020-2021 national championship winner, Team: usc
+	Type: ml, Line: None, Odds: 5000
+	Risk: 10, To Win: 500
+	Percent Off: 0.66
+
+Sport: tennis, Title: wta - french open 2020 - odds to win, Team: sloane stephens
+	Type: ml, Line: None, Odds: 2200
+	Risk: 10, To Win: 220
+	Percent Off: 0.44
+
+Sport: tennis, Title: wta - french open 2020 - odds to win, Team: cori gauff
+	Type: ml, Line: None, Odds: 2500
+	Risk: 10, To Win: 250
+	Percent Off: 0.29
+
+Sport: tennis, Title: wta - french open 2020 - odds to win, Team: johanna konta
+	Type: ml, Line: None, Odds: 3000
+	Risk: 10, To Win: 300
+	Percent Off: 0.55
+
+Sport: tennis, Title: wta - french open 2020 - odds to win, Team: iga swiatek
+	Type: ml, Line: None, Odds: 3000
+	Risk: 10, To Win: 300
+	Percent Off: 0.68
+
