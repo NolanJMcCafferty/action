@@ -1,5 +1,4 @@
 import datetime
-import sys
 
 
 class Bet:
@@ -22,7 +21,7 @@ class Bet:
         pinnacle_odds,
         bet_type,
         add_bet_line,
-        action_line = None, 
+        action_line=None,
     ):  
         self.sport = sport
         self.title = title
@@ -51,7 +50,6 @@ class Bet:
 
     def odds_cross_over(self):
         return (self.action_odds < 0 < self.pinnacle_odds) or (self.pinnacle_odds < 0 < self.action_odds)
-
 
     def get_size(self):
         perc_above_threshold = self.perc_off - Bet.threshold
@@ -83,7 +81,6 @@ class Bet:
             return self.size
         else:
             return int(self.size * (self.action_odds / -100))
-
 
     def log(self):
         with open(Bet.log_file, 'a+') as file:

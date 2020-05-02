@@ -2,6 +2,7 @@ league_dict = {
 
 	# baseball
 	"mlb exhibition baseball": "mlb pre season",
+	"taiwan cpbl": "chinese taipei professional league",
 
 	# basketball
 	"euroleague": "europe euroleague",
@@ -68,6 +69,7 @@ league_dict = {
 	"holland jupiler league": "netherlands eerste divisie",
 	"italy coppa italia": "italy cup",
 	"other england leagues": "england national league ",
+	"other american leagues": "nicaragua primera division",
 	"peru 1": "peru primera division",
 	"portugal segunda liga": "portugal ligapro",
 	"romania liga i": "romania liga 1",
@@ -119,7 +121,6 @@ basketball_team_dict = {
 	"anadolu efes istanbul": "anadolu efes",
 	"bc zalgiris kaunas": "zalgiris kaunas",
 	"olympiacos": "olympiakos bc",
-	"olimpia milano": "emporio armani milano",
 	"saski baskonia": "kirolbet baskonia",
 	"fenerbahce ulker": "fenerbahce",
 	"zenit petersburg": "bc zenit st petersburg",
@@ -135,7 +136,6 @@ basketball_team_dict = {
 	"brescia": "basket brescia leonessa",
 	"partizan": "partizan belgrade",
 	"rytas": "lietuvos rytas",
-	"oldenburg": "baskets oldenburg",
 	"venezia": "reyer venezia mestre",
 	"tofas": "tofas sk",
 	"unicaja": "unicaja malaga",
@@ -188,7 +188,6 @@ basketball_team_dict = {
 	"cremona": "vanoli braga cremona",
 	"cantu": "pallacanestro cantu",
 	"fortitudo bologna": "fortitudo bologna 103",
-	"brescia": "basket brescia leonessa",
 	"pesaro": "vl pesaro",
 	"treviso": "de longhi treviso",
 	"brindisi": "new basket brindisi (enel)",
@@ -372,12 +371,17 @@ soccer_name_dict = {
 	"floridsdorfer ac": "florisdorfer ac",
 	"gak 1902": "grazer ak",
 
-
 	# australia
 	"brisbaine roar u": "brisbaine roar",
 	"sydney wanderers": "western sydney",
 	"sydney": "sydney fc",
 	"central coast mariners academy": "central coast",
+
+	# belarus
+	"zhodino": "torpedo zhodino",
+	"sfc slutsk": "fc slutsksakhar",
+	"dinamo brest": "fc dinamo brest",
+	"isloch minsk": "fk isloch minsk",
 
 	# belgium b
 	"k.sv.roeselare": "roeselare",
@@ -743,7 +747,6 @@ soccer_name_dict = {
 
 	# uefa champions
 	"tottenham": "tottenham hotspur",
-	"atalanta": "atalanta bc (n)",
 	"fc barcelona": "barcelona",
 
 	# uefa europa
@@ -760,7 +763,7 @@ soccer_name_dict = {
 	"malmo": "malmo ff",
 	"wolverhampton wanderers": "wolves",
 
-	#uae 
+	# uae
 	"al sharjah": "sharjah fc",
 	"al ain": "al ain (uae)",
 	"al fujairah": "fujairah sport club",
